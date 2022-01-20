@@ -1,12 +1,21 @@
-source env/bin/activate
-source env/bin/deactivate
-pip3 --version
 pip3 install virtualenv
-django-admin #command
-django-admin startproject study-bud #going to genrate dummy project structure.
-python manage.py runserver # to run ther server
-python manage.py startup base #migrate the exisiting scipts.
+virtualenv mypython
 
+source virtualenv/bin/activate
+source virtualenv/bin/deactivate
+pip3 --version
+
+at local env we need to install as per the requirement
+pip install django
+
+django-admin #command
+django-admin startproject study-bud . #going to genrate dummy project structure.
+python manage.py startapp base
+python manage.py runserver # to run ther server
+python manage.py startup base #migrate thse exisiting scipts.
+python manage.py makemigrations # to generate the migrations files
+python manage.py migrations
+$ python manage.py createsuperuser # create admin user
 
 views are controller here.
 settings.py = is like pom.xml to add more packages, middleware and settings project 
